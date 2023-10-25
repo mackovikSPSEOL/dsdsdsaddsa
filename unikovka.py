@@ -10,11 +10,14 @@ print("Jsi ztracený, musíš najít východ ven a máš pouze 3 životy.\n")
 konec_hry = False
 while not konec_hry:
     #M-0
-    uzivateluv_input = input("\n máš čtyři směry který si vybereš?(doleva, doprava, rovne):\n")
+    uzivateluv_input = input("\n máš tři směry který si vybereš?(doleva, doprava, rovne):\n")
     
+    if zivot == 0:
+        konec_hry = "smrt"
+        break;
     #M-1
     if uzivateluv_input == "rovne":
-        print("\nRozhodl ses jít rovně, není tu nic jen nějaké pozůstatky kostí..")
+        print("\n Rozhodl ses jít rovně, není tu nic jen nějaké pozůstatky kostí..")
         uzivateluv_input_2 = input("není tu nic jiného takže kam půjdeš teď? (rovne, zpet):")
         if uzivateluv_input_2 == "zpet":
             uzivateluv_input = "zadny"
@@ -32,7 +35,7 @@ while not konec_hry:
             if inventar == "nic":
                 print("jsou tu zamčené dveře a nemáš nic u sebe")
                 print("musíš se vrátit na začátek")
-                uzivateluv_input = nic
+                uzivateluv_input = "nic"
     #M-7
     if uzivateluv_input == "doprava":
         print("je tu někdo.. blíží se k tobě")
@@ -44,8 +47,8 @@ while not konec_hry:
                 uzivateluv_input = "nic"
             elif sance == 0:
                 print("nepovedlo se ti utéct -1 život, ale jsi zpět\n")
-                print(f"aktuální počet životů:{zivot}.")
                 zivot =- 1
+                print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
         elif uzivateluv_boj == "bojovat":
@@ -55,8 +58,8 @@ while not konec_hry:
                 uzivateluv_input = "nic"
             elif sance == 0:
                 print("prohrál si boj, -1 život\n")
-                print(f"aktuální počet životů:{zivot}.")
                 zivot =- 1
+                print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
     #M-5
@@ -67,9 +70,10 @@ while not konec_hry:
         if sance == 1:
             uzivateluv_input_2= input("tento boj si vyhrál, mužeš jít dál nebo zpět(doleva, zpet):")
         elif sance == 0:
-            uzivateluv_input_2 = input("tento boj si prohrál -1 život, mužeš jít dál nebo zpět(doleva, zpet):")
             zivot =- 1
             print(f"aktuální počet životů:{zivot}.")
+            uzivateluv_input_2 = input("tento boj si prohrál -1 život, mužeš jít dál nebo zpět(doleva, zpet):")
+            
         #M-6
         if uzivateluv_input_2 == "doleva":
             print("našel jsi KLÍČ, teď rychle utíkej zpět ke dveřím!\n")
@@ -93,8 +97,20 @@ while not konec_hry:
 
 
 if konec_hry == "utek":
-    print("vyhrál jsi, konec hry\n")
-if konec_hry == "smrt":
+    print("vyhrál jsi, konec hry!\n")
+    if zivot == 1:
+        print("zůstal ti 1 život.")
+    if zivot >= 2:
+        print(f"zůstaly ti {zivot} životy.")
+
+elif konec_hry == "smrt":
     print("prohrál jsi, konec hry\n")
+else:
+    print("chyba")
+    print(f"uzivateluv input je {uzivateluv_input}")
+    print(f"uzivateluv input_2 je {uzivateluv_input_2}")
+    print(f"sance = {sance}")
+    print(f"inventar = {inventar}")
+
 
 
