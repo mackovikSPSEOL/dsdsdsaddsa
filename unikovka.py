@@ -47,7 +47,7 @@ while not konec_hry:
                 uzivateluv_input = "nic"
             elif sance == 0:
                 print("nepovedlo se ti utéct -1 život, ale jsi zpět\n")
-                zivot =- 1
+                zivot = zivot - 1
                 print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
@@ -58,7 +58,7 @@ while not konec_hry:
                 uzivateluv_input = "nic"
             elif sance == 0:
                 print("prohrál si boj, -1 život\n")
-                zivot =- 1
+                zivot = zivot - 1
                 print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
@@ -70,7 +70,7 @@ while not konec_hry:
         if sance == 1:
             uzivateluv_input_2= input("tento boj si vyhrál, mužeš jít dál nebo zpět(doleva, zpet):")
         elif sance == 0:
-            zivot =- 1
+            zivot = zivot - 1
             print(f"aktuální počet životů:{zivot}.")
             uzivateluv_input_2 = input("tento boj si prohrál -1 život, mužeš jít dál nebo zpět(doleva, zpet):")
             
