@@ -9,12 +9,13 @@ print("Vítej v mé únikové hře.\n")
 print("Jsi ztracený, musíš najít východ ven a máš pouze 3 životy.\n")
 konec_hry = False
 while not konec_hry:
-    #M-0
-    uzivateluv_input = input("\n máš tři směry který si vybereš?(doleva, doprava, rovne):\n")
-    
     if zivot == 0:
         konec_hry = "smrt"
         break;
+    #M-0
+    uzivateluv_input = input("\n máš tři směry který si vybereš?(doleva, doprava, rovne):\n")
+    
+    
     #M-1
     if uzivateluv_input == "rovne":
         print("\n Rozhodl ses jít rovně, není tu nic jen nějaké pozůstatky kostí..")
