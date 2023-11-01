@@ -18,6 +18,9 @@ while not konec_hry:
     
     #M-1
     if uzivateluv_input == "rovne":
+        if zivot == 0:
+            konec_hry = "smrt"
+            break;
         print("\n Rozhodl ses jít rovně, není tu nic jen nějaké pozůstatky kostí..")
         uzivateluv_input_2 = input("není tu nic jiného takže kam půjdeš teď? (rovne, zpet):")
         if uzivateluv_input_2 == "zpet":
@@ -49,6 +52,9 @@ while not konec_hry:
             elif sance == 0:
                 print("nepovedlo se ti utéct -1 život, ale jsi zpět\n")
                 zivot = zivot - 1
+                if zivot == 0:
+                    konec_hry = "smrt"
+                    break;
                 print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
@@ -60,6 +66,9 @@ while not konec_hry:
             elif sance == 0:
                 print("prohrál si boj, -1 život\n")
                 zivot = zivot - 1
+                if zivot == 0:
+                    konec_hry = "smrt"
+                    break;
                 print(f"aktuální počet životů:{zivot}.")
                 uzivateluv_input = "nic"
 
@@ -72,6 +81,9 @@ while not konec_hry:
             uzivateluv_input_2= input("tento boj si vyhrál, mužeš jít dál nebo zpět(doleva, zpet):")
         elif sance == 0:
             zivot = zivot - 1
+            if zivot == 0:
+                konec_hry = "smrt"
+                break;
             print(f"aktuální počet životů:{zivot}.")
             uzivateluv_input_2 = input("tento boj si prohrál -1 život, mužeš jít dál nebo zpět(doleva, zpet):")
             
