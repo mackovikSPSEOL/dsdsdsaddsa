@@ -1,9 +1,7 @@
 import random
 import string
 import time
-# tri_pismena =[]  
-# ctyri_pismena =[] 
-# zbytek = []
+
 vysledek = []
 konec = 0
 
@@ -11,6 +9,13 @@ while True:
     if konec == 1:
         break;
     nastaveni_textu = input("vyberte jednu z možností podle které chcete nastavit kritéria,(paragraf, slova, stranky):")
+    delka_slova = input("jak dlouhe mají být slova?(pokud nahodně napište ""random""):")
+
+    if delka_slova == "random":
+        delka_slova2 = random.randint(1,12)
+    
+    
+        
 
 
 
@@ -24,10 +29,16 @@ while True:
             print("\n")
             pocet_paragrafu = int(input("vložte číslo, které definuje počet paragrafů:"))
             pocet_slov = pocet_paragrafu * random.randint(60,130)
-            for neco in range(pocet_slov):
-                delka_slova = random.randint(2, 13)
-                nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova))
-                vysledek.append(nove_slovo)
+            if delka_slova == "random":
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova2))
+                    delka_slova2 = random.randint(1,12)
+                    vysledek.append(nove_slovo)
+            else:
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(int(delka_slova)))
+                    vysledek.append(nove_slovo)
+
             break;
 
 
@@ -35,10 +46,15 @@ while True:
             print("\n")
             pocet_slov = int(input("zadejte číslo, které definuje počet slov:"))
 
-            for neco in range(pocet_slov):
-                delka_slova = random.randint(2, 13)
-                nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova))
-                vysledek.append(nove_slovo)
+            if delka_slova == "random":
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova2))
+                    delka_slova2 = random.randint(1,12)
+                    vysledek.append(nove_slovo)
+            else:
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(int(delka_slova)))
+                    vysledek.append(nove_slovo)
             break;
     
 
@@ -48,10 +64,15 @@ while True:
             print("\n")
             pocet_stran = int(input("zadejte číslo, které definuje počet stran(A4):"))
             pocet_slov = pocet_stran * random.randint(200,250)
-            for neco in range(pocet_slov):
-                delka_slova = random.randint(2, 13)
-                nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova))
-                vysledek.append(nove_slovo)
+            if delka_slova == "random":
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(delka_slova2))
+                    delka_slova2 = random.randint(1,12)
+                    vysledek.append(nove_slovo)
+            else:
+                for neco in range(pocet_slov):
+                    nove_slovo = ''.join(random.choice(string.ascii_lowercase) for neco in range(int(delka_slova)))
+                    vysledek.append(nove_slovo)
             break;
 
     if nastaveni_textu == "paragraf" or nastaveni_textu == "slova" or nastaveni_textu == "stranky":
@@ -63,6 +84,7 @@ while True:
             print(f"už zbývá {x} sekund.")
         print("\n \t")
         print(' '.join(vysledek))
+
         while True:
             uzivateluv_vyber = input("chcete vytvořit textový soubor? (ano, ne):")
             if uzivateluv_vyber == "ano":
@@ -90,14 +112,7 @@ else:
    
     print("špatně, nedokážeš napsat ani jednu z vybraných možností?")
 
-         # if len(nove_slovo) == 2:
-        #     dve.pismena.apppend(nove_slovo)
-        # elif len(nove_slovo) == 3:
-        #     tri_pismena.append(nove_slovo)
-        # elif len(nove_slovo) == 4:
-       #     ctyri_pismena.append(nove_slovo)
-        # else:
-        #     zbytek.append(nove_slovo)
+    
 
 
 
