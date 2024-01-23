@@ -21,7 +21,7 @@ if prvni_hod_kostek_1 == 1 or prvni_hod_kostek_2 == 1:
         pocet_bodu = pocet_bodu + 100
     
 
-elif prvni_hod_kostek_1 == 5 or prvni_hod_kostek_2 == 5:
+if prvni_hod_kostek_1 == 5 or prvni_hod_kostek_2 == 5:
     pocet_bodu = pocet_bodu + 50
     if prvni_hod_kostek_1 == 5 and prvni_hod_kostek_2 == 5:
         pocet_bodu = pocet_bodu + 50
@@ -46,7 +46,7 @@ if druhy_hod_kostek_1 == 1 or druhy_hod_kostek_2 == 1:
         pocet_bodu = pocet_bodu + 100
     
 
-elif druhy_hod_kostek_1 == 5 or druhy_hod_kostek_2 == 5:
+if druhy_hod_kostek_1 == 5 or druhy_hod_kostek_2 == 5:
     pocet_bodu = pocet_bodu + 50
     if druhy_hod_kostek_1 == 5 and druhy_hod_kostek_2 == 5:
         pocet_bodu = pocet_bodu + 50
@@ -75,7 +75,7 @@ if treti_hod_kostek1 == 1 or treti_hod_kostek2 == 1:
         pocet_bodu = pocet_bodu + 100
     
 
-elif treti_hod_kostek1 == 5 or treti_hod_kostek2 == 5:
+if treti_hod_kostek1 == 5 or treti_hod_kostek2 == 5:
     pocet_bodu = pocet_bodu + 50
     if treti_hod_kostek1 == 5 and treti_hod_kostek2 == 5:
         pocet_bodu = pocet_bodu + 50
@@ -115,9 +115,9 @@ if prvni_hod_kostek_1 == prvni_hod_kostek_2:
 
 
 postupka = [1,2,3,4,5,6]
-postupka_kostek = [prvni_hod_kostek_1, prvni_hod_kostek_2, druhy_hod_kostek_1, druhy_hod_kostek_2, treti_hod_kostek1, treti_hod_kostek2]
+cisla_hrace = [prvni_hod_kostek_1, prvni_hod_kostek_2, druhy_hod_kostek_1, druhy_hod_kostek_2, treti_hod_kostek1, treti_hod_kostek2]
 
-if sorted(postupka_kostek) == postupka:
+if sorted(cisla_hrace) == postupka:
     pocet_bodu = pocet_bodu + 1500
 
 
