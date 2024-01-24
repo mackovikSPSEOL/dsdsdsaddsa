@@ -8,3 +8,5 @@ Největší problém pro mě byl naprogramování stejných čísel 3-6x a oceni
 
 ## Funkčnost
 V tomto kódu, jsem použil na můj vkus až moc podmínek a je mi zcela jasné, že to šlo udělat velice jednoduchým způsobem, který mě nenapadl.
+
+dnes (24.01.2024) jsem zjistil že tato hra měla mít 6 hracích kostek a v mým kódu jsou jen dvě. Nevím jestli to bylo řeceno v hodině že jich má být 6 jelikož jsem chyběl a tak jsem se ptal spolužáka ale ten mi dnes řekl že jich mělo být 6. Omlouvám se, že mě to nenapadlo v případě nespokojenosti jsem ochoten to nějak udělat. Ale nezačínal jsem s tím protože nevím jestli může být tato verze. 
